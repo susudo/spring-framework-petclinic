@@ -1,11 +1,11 @@
 --- 
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 labels: 
   app: petclinic
-metadata: ~
+metadata:
 name: hello
-spec: ~
+spec:
 strategy: 
   type: Recreate
 template: 
@@ -29,7 +29,7 @@ apiVersion: v1
 kind: Service
 labels: 
   app: petclinic
-metadata: ~
+metadata:
 name: hello
 ports: 
   - 
@@ -38,5 +38,5 @@ ports:
 selector: 
   app: petclinic
   tier: petclinic
-spec: ~
+spec:
 type: LoadBalancer
