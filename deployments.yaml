@@ -2,23 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: hello
+ name: petclinicAppProject
  labels: 
-  app: petclinic
+  app: petclinic2
 spec:
  selector:
   matchLabels:
-   app: petclinic
+   app: petclinic2
  strategy: 
   type: Recreate
  template: 
   metadata: 
    labels: 
-    app: petclinic
+    app: petclinic2
     tier: petclinic
   spec:
    containers:
-   - name: petclinic
+   - name: petclinic2
      image: "gcr.io/test-baobab/tomcat:latest"
      imagePullPolicy: Always
      ports:
@@ -26,16 +26,16 @@ spec:
 --- 
 apiVersion: v1
 kind: Service
-labels: 
-  app: petclinic
 metadata:
+ labels: 
+  app: petclinic
  name: hello
 spec:
  ports: 
-  - port: 8080
-    targetPort: 8080
+ - port: 8080
+   targetPort: 8080
  selector: 
   app: petclinic
   tier: petclinic
 spec:
-type: LoadBalancer
+ type: LoadBalancer
