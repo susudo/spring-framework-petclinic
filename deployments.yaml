@@ -10,17 +10,16 @@ spec:
   type: Recreate
  template: 
   metadata: 
-    labels: 
-      app: petclinic
-      tier: petclinic
-spec: 
- containers: 
+   labels: 
+    app: petclinic
+    tier: petclinic
+spec:
+ containers:
  - name: petclinic
    image: "gcr.io/test-baobab/tomcat:latest"
    imagePullPolicy: Always
-   ports: 
+   ports:
    - containerPort: 8080
-
 --- 
 apiVersion: v1
 kind: Service
