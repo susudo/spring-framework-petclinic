@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: petclinicapproject
+ name: petclinicapp
  labels: 
   app: petclinic2
 spec:
@@ -20,7 +20,7 @@ spec:
   spec:
    containers:
    - name: petclinic2
-     image: "gcr.io/test-baobab/tomcatapp:latest"
+     image: "gcr.io/test-baobab/petclinic:latest"
      imagePullPolicy: Always
      ports:
      - containerPort: 8080
@@ -30,7 +30,7 @@ kind: Service
 metadata:
  labels: 
   app: petclinic2
- name: petclinicservice
+ name: petclinicappservice
 spec:
  ports:
  - port: 8080
