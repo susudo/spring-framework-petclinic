@@ -1,10 +1,10 @@
 --- 
 apiVersion: apps/v1
 kind: Deployment
-labels: 
- app: petclinic
 metadata:
  name: hello
+ labels: 
+  app: petclinic
 spec:
  strategy: 
   type: Recreate
