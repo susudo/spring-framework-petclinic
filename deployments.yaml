@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: petclinicAppProject
+ name: petclinicapproject
  labels: 
   app: petclinic2
 spec:
@@ -29,7 +29,7 @@ kind: Service
 metadata:
  labels: 
   app: petclinic
- name: hello
+ name: petclinicservice
 spec:
  ports: 
  - port: 8080
