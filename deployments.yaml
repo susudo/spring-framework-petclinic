@@ -6,6 +6,7 @@ metadata:
  labels: 
   app: petclinic2
 spec:
+ replica: 2
  selector:
   matchLabels:
    app: petclinic2
@@ -28,10 +29,10 @@ apiVersion: v1
 kind: Service
 metadata:
  labels: 
-  app: petclinic
+  app: petclinic2
  name: petclinicservice
 spec:
- ports: 
+ ports:
  - port: 8080
    targetPort: 8080
  selector: 
