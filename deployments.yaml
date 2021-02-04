@@ -12,7 +12,7 @@ spec:
   metadata: 
    labels: 
     app: petclinic
-    tier: petclinic
+     tier: petclinic
 spec:
  containers:
  - name: petclinic
