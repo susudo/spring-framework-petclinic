@@ -28,15 +28,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- labels: 
-  app: petclinic2
- name: petclinicappservice
-spec:
- ports:
- - port: 8080
-   targetPort: 8080
- selector: 
-  app: petclinic
-  tier: petclinic
-spec:
- type: LoadBalancer
+  labels:
+    app: petclinic2
+  name: petclinicappservice
+  spec: null
+  ports:
+    - port: 8080
+  targetPort: 8080
+  selector:
+    app: petclinic
+    tier: petclinic
+    spec: null
+    type: LoadBalancer
+
